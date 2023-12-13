@@ -1,6 +1,7 @@
 package unittests.java.lang;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.parallel.*;
 import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.*;
 
@@ -8,6 +9,7 @@ import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+@Execution(ExecutionMode.CONCURRENT)
 public class IntegerTest {
 	@Test
 	public void parsesInMiddleOfString() {

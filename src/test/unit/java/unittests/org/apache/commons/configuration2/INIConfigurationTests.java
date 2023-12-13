@@ -3,6 +3,7 @@ package unittests.org.apache.commons.configuration2;
 import org.apache.commons.configuration2.*;
 import org.apache.commons.configuration2.ex.*;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.parallel.*;
 
 import java.io.*;
 
@@ -10,6 +11,7 @@ import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+@Execution(ExecutionMode.CONCURRENT)
 public class INIConfigurationTests {
 	@Test
 	public void notThrowsWhenRequestedNonExistingSection() throws ConfigurationException, IOException {
